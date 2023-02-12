@@ -1,24 +1,36 @@
-function preload() {
+function preload() 
+{
+   
 }
  function setup() 
  {
-    canvas = createCanvas(640, 480);
+    canvas = createCanvas(600, 400);
     canvas.position(110, 250);
-    video = createCapture(VIDEO);
-video.hide();
-    tint_color = "";
+    
  }
   function draw()
   {
-    image(video, 0, 0, 640, 480);
-    tint(tint_color);
+    
+    
+    
+    fill(255, 0, 0);
+    stroke(255,0,0)
+    circle(50, 50, 80); 
+    circle(550, 50, 80); 
+    circle(550, 350, 80); 
+    circle(50, 350, 80); 
+    fill(0, 255, 0);
+    stroke(0,255,0);
+    rect(90, 40, 420, 20 );
+    rect(90, 340, 420, 20 );
+    rect(40, 90, 20, 220 );
+    rect(540, 90, 20, 220 );
   }
+
+
  function take_snapshot() 
  {
     save('Zara.png');
  }
   
- function filter_tint()
- {
-    tint_color = document.getElementById("color_name").value;
- }
+ 
